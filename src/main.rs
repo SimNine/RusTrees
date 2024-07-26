@@ -1,7 +1,19 @@
+use bevy::prelude::*;
+
+#[derive(Component)]
+struct Position {
+    x: f32,
+    y: f32
+}
+
 fn main() {
     let hello = "heyooo";
     println!("Hello, {} {}!", hello, foo("gakljrhlejk"));
     println!("Well, this is neat: {} - {}", foo2(8), foo2(23));
+
+    let mut app = App::new();
+    app.add_plugins(DefaultPlugins)
+        .run();
 }
 
 fn foo(_x: &'static str) -> &'static str {
@@ -25,3 +37,5 @@ fn bar(x: i32) -> &'static str {
         "10 or more"
     }
 }
+
+// asdawd
